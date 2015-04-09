@@ -48,7 +48,7 @@ namespace SpeedSharkServer.Controller
 
         public static List<Session> GetSessions()
         {
-            return SessionHandler.GetSession();
+            return SessionHandler.GetSessions();
         }
 
         public static List<Session> GetOngoingSession()
