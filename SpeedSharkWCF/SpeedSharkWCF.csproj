@@ -50,7 +50,11 @@
     <Compile Include="EmployeeService.cs" />
     <Compile Include="ICustomerService.cs" />
     <Compile Include="IEmployeeService.cs" />
+    <Compile Include="ISessionService.cs" />
+    <Compile Include="ITruckService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionService.cs" />
+    <Compile Include="TruckService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -60,6 +64,9 @@
       <Project>{89674bc7-daa3-4b5d-8258-9ad95cbafefe}</Project>
       <Name>SpeedSharkServer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
