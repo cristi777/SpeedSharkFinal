@@ -31,27 +31,27 @@ namespace SpeedSharkServer.Controller
 
 
 
-        public static void CreateSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public  void CreateSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             SessionHandler.CreateSession(cargoId, departureTime, arrivalTime, truckId, destAddress, destCity);
         }
 
-        public static void UpdateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public  void UpdateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             SessionHandler.UpdateSession(sessionId, cargoId, departureTime, arrivalTime, truckId, destAddress, destCity);
         }
 
-        public static Session GetSession(int sessionId)
+        public  Session GetSession(int sessionId)
         {
             return SessionHandler.GetSession(sessionId);
         }
 
-        public static List<Session> GetSessions()
+        public  List<Session> GetSessions()
         {
             return SessionHandler.GetSessions();
         }
 
-        public static List<Session> GetOngoingSession()
+        public List<Session> GetOngoingSession()
         {
             return SessionHandler.GetOngoingSession();
         }
