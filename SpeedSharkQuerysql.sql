@@ -6,6 +6,7 @@ fName nvarchar(50) not null,
 lName nvarchar(50) not null,
 username nvarchar(50) not null,
 password nvarchar(50) not null,
+type nvarchar(50) not null,
 primary key(username)
 )
 
