@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SpeedSharkDB" Class="SpeedSharkModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=FASTESTPCEVER\CRISTISQL;Initial Catalog=SpeedSharkDB;Integrated Security=True" SettingsObjectName="SpeedSharkServer.Properties.Settings" SettingsPropertyName="SpeedSharkDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cargo" Member="Cargos">
+    <Type Name="Cargo">
+      <Column Name="cargoId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="weight" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="Cargo_Order" Member="Orders" ThisKey="cargoId" OtherKey="cargoId" Type="Order" />
+      <Association Name="Cargo_Session" Member="Sessions" ThisKey="cargoId" OtherKey="cargoId" Type="Session" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Truck" Member="Trucks">
+    <Type Name="Truck">
+      <Column Name="truckId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Truck_Session" Member="Sessions" ThisKey="truckId" OtherKey="truckId" Type="Session" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Customer" Member="Customers">
+    <Type Name="Customer">
+      <Column Name="CVR" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="fName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Customer_Order" Member="Orders" ThisKey="CVR" OtherKey="custCVR" Type="Order" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Employee" Member="Employees">
+    <Type Name="Employee">
+      <Column Name="fName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="lName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Order">
+      <Column Name="orderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="orderNo" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="custCVR" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="sessionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cargoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Cargo_Order" Member="Cargo" ThisKey="cargoId" OtherKey="cargoId" Type="Cargo" IsForeignKey="true" />
+      <Association Name="Customer_Order" Member="Customer" ThisKey="custCVR" OtherKey="CVR" Type="Customer" IsForeignKey="true" />
+      <Association Name="Session_Order" Member="Session" ThisKey="sessionId" OtherKey="sessionId" Type="Session" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Session" Member="Sessions">
+    <Type Name="Session">
+      <Column Name="sessionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cargoId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="departureTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="arrivalTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="truckId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="destCity" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="destAddress" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Session_Order" Member="Orders" ThisKey="sessionId" OtherKey="sessionId" Type="Order" />
+      <Association Name="Cargo_Session" Member="Cargo" ThisKey="cargoId" OtherKey="cargoId" Type="Cargo" IsForeignKey="true" />
+      <Association Name="Truck_Session" Member="Truck" ThisKey="truckId" OtherKey="truckId" Type="Truck" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

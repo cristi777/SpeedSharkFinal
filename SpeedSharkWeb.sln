@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSharkWeb", "SpeedSharkWeb\SpeedSharkWeb.csproj", "{E164597B-47A4-4173-A205-798077DC15F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSharkServer", "SpeedSharkServer\SpeedSharkServer.csproj", "{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSharkWCF", "SpeedSharkWCF\SpeedSharkWCF.csproj", "{ADD57656-46AA-45ED-A378-3D5326209813}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E164597B-47A4-4173-A205-798077DC15F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E164597B-47A4-4173-A205-798077DC15F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E164597B-47A4-4173-A205-798077DC15F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E164597B-47A4-4173-A205-798077DC15F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADD57656-46AA-45ED-A378-3D5326209813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD57656-46AA-45ED-A378-3D5326209813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD57656-46AA-45ED-A378-3D5326209813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD57656-46AA-45ED-A378-3D5326209813}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

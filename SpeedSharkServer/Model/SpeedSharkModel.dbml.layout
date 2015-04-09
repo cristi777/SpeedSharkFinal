@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 10" name="SpeedSharkModel">
+  <DataContextMoniker Name="/SpeedSharkModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fbb918dd-6f11-4f85-b599-cabe847585a7" absoluteBounds="4.375, 5, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Cargo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b8b230b9-ad0e-47c7-a4f5-c67d9a2f119f" absoluteBounds="4.39, 5.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="226337dd-7dda-4266-8dcb-fa5e316f5e0b" absoluteBounds="4.375, 2.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Truck" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ee705fe-3df9-4b28-814c-c2dbf829dec9" absoluteBounds="4.39, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="caacff23-849b-497e-8c3d-ff3b56927010" absoluteBounds="4.375, 7.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Customer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7ac3d55-9dae-4b2a-a96e-f344919ccc7c" absoluteBounds="4.39, 7.9600000000000009, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9abf07fd-7b60-46a3-976f-51d9df49d793" absoluteBounds="7.375, 7.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fc7d35a-812d-4b59-a707-f446566f2cad" absoluteBounds="7.3900000000000006, 8.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="afcc88ec-8bce-4d81-ac17-70d6fdb99069" absoluteBounds="7.125, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Order" />
+      <nestedChildShapes>
+        <elementListCompartment Id="209d1f65-8851-4286-b1cb-1df650f65d4f" absoluteBounds="7.1400000000000006, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7879ee73-d15b-4326-9339-1e1fbf7a1399" absoluteBounds="7.125, 1.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SpeedSharkModelDataContext/Session" />
+      <nestedChildShapes>
+        <elementListCompartment Id="948e8d70-e8e3-446d-baf8-9da85fc27e75" absoluteBounds="7.1400000000000006, 1.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 5.59699625651042); (7.125 : 5.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SpeedSharkModelDataContext/Cargo/Cargo_Order" />
+      <nodes>
+        <classShapeMoniker Id="fbb918dd-6f11-4f85-b599-cabe847585a7" />
+        <classShapeMoniker Id="afcc88ec-8bce-4d81-ac17-70d6fdb99069" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 9.52329752604167); (7.21875 : 9.52329752604167); (7.21875 : 6.65549967447917)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SpeedSharkModelDataContext/Customer/Customer_Order" />
+      <nodes>
+        <classShapeMoniker Id="caacff23-849b-497e-8c3d-ff3b56927010" />
+        <classShapeMoniker Id="afcc88ec-8bce-4d81-ac17-70d6fdb99069" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.125 : 3.65549967447917); (8.125 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SpeedSharkModelDataContext/Session/Session_Order" />
+      <nodes>
+        <classShapeMoniker Id="7879ee73-d15b-4326-9339-1e1fbf7a1399" />
+        <classShapeMoniker Id="afcc88ec-8bce-4d81-ac17-70d6fdb99069" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 5); (6.75 : 4.625); (6.75 : 2.57774983723958); (7.125 : 2.57774983723958)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SpeedSharkModelDataContext/Cargo/Cargo_Session" />
+      <nodes>
+        <classShapeMoniker Id="fbb918dd-6f11-4f85-b599-cabe847585a7" />
+        <classShapeMoniker Id="7879ee73-d15b-4326-9339-1e1fbf7a1399" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 3.17912475585937); (6.66666666666667 : 3.17912475585937 : JumpStart); (6.83333333333333 : 3.17912475585937 : JumpEnd); (7.125 : 3.17912475585937)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SpeedSharkModelDataContext/Truck/Truck_Session" />
+      <nodes>
+        <classShapeMoniker Id="226337dd-7dda-4266-8dcb-fa5e316f5e0b" />
+        <classShapeMoniker Id="7879ee73-d15b-4326-9339-1e1fbf7a1399" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
