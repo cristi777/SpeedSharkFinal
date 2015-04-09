@@ -26,9 +26,9 @@ namespace SpeedSharkServer.Controller
             }
         }
 
-        public void insertEmployee(string fName, string lName, string username, string password)
+        public void insertEmployee(string fName, string lName, string username, string password, string type)
         {
-            EmployeeHandler.CreateEmployee(fName, lName, username, password);
+            EmployeeHandler.CreateEmployee(fName, lName, username, password, type);
         }
 
         public Employee getEmployee(string username)
@@ -36,14 +36,19 @@ namespace SpeedSharkServer.Controller
             return EmployeeHandler.GetEmployee(username);
         }
 
-        public void UpdateEmployee(string fName, string lName, string username, string password)
+        public void UpdateEmployee(string fName, string lName, string username, string password, string type)
         {
-            EmployeeHandler.UpdateEmployee(fName, lName, username, password);
+            EmployeeHandler.UpdateEmployee(fName, lName, username, password, type);
         }
 
         public List<Employee> getEmployees()
         {
             return EmployeeHandler.GetEmployees();
+        }
+
+        public string employeeLogin(string username, string password)
+        {
+            return EmployeeHandler.EmployeeLogin(username, password);
         }
     }
 }

@@ -33,6 +33,14 @@ namespace SpeedSharkWCF
         private string lName;
         private string username;
         private string password;
+        private string type;
+
+        [DataMemberAttribute]
+        public string Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
 
         [DataMemberAttribute]
         public string FName
@@ -59,5 +67,4 @@ namespace SpeedSharkWCF
             set { password = value; }
         }
     }
-
 }

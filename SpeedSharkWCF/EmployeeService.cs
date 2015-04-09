@@ -31,6 +31,7 @@ namespace SpeedSharkWCF
                     servicEmployee.LName = employeeCtr.getEmployee(username).lName;
                     servicEmployee.Username = employeeCtr.getEmployee(username).username;
                     servicEmployee.Password = employeeCtr.getEmployee(username).password;
+                    servicEmployee.Type = employeeCtr.getEmployee(username).type;
                 }
                 catch (NullReferenceException)
                 {
@@ -48,13 +49,13 @@ namespace SpeedSharkWCF
         }
 
 
-        public void UpdateEmployee(string fName, string lName, string username, string password)
+        public void UpdateEmployee(string fName, string lName, string username, string password, string type)
         {
             if (System.Threading.Monitor.TryEnter(obj3, 45000))
             {
                 try
                 {
-                    employeeCtr.UpdateEmployee(fName, lName, username, password);
+                    employeeCtr.UpdateEmployee(fName, lName, username, password, type);
                 }
                 finally
                 {
@@ -79,10 +80,11 @@ namespace SpeedSharkWCF
                         {
                             Employee serviceEmployee = new Employee();
 
-                            serviceEmployee.fName = hostEmployee.fName;
+                            serviceEmployee.FName = hostEmployee.fName;
                             serviceEmployee.LName = hostEmployee.lName;
                             serviceEmployee.Username = hostEmployee.username;
                             serviceEmployee.Password = hostEmployee.password;
+                            serviceEmployee.Type = hostEmployee.type;
                             
                             employees.Add(serviceEmployee);
                         }
@@ -100,13 +102,13 @@ namespace SpeedSharkWCF
             return employees;
         }
 
-        public void insertEmployee(string fName, string lName, string username, string password)
+        public void insertEmployee(string fName, string lName, string username, string password, string type)
         {
             if (System.Threading.Monitor.TryEnter(obj1, 45000))
             {
                 try
                 {
-                    employeeCtr.insertEmployee(fName, lName, username, password);
+                    employeeCtr.insertEmployee(fName, lName, username, password, type);
                 }
                 finally
                 {

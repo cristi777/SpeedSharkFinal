@@ -17,7 +17,7 @@ namespace SpeedSharkServer.DBHandler
 
                 int maxOrderId = 0;
                 var query = db.Orders.OrderByDescending(ord => ord.orderId).SingleOrDefault().orderId;
-                if (query != null)
+                if (query != 0 && query != null)
                 {
                     maxOrderId = query;
                 }
