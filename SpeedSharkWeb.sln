@@ -1,9 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSharkWeb", "SpeedSharkWeb\SpeedSharkWeb.csproj", "{E164597B-47A4-4173-A205-798077DC15F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ADD57656-46AA-45ED-A378-3D5326209813} = {ADD57656-46AA-45ED-A378-3D5326209813}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeedSharkServer", "SpeedSharkServer\SpeedSharkServer.csproj", "{89674BC7-DAA3-4B5D-8258-9AD95CBAFEFE}"
 EndProject

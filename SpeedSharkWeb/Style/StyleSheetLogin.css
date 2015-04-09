@@ -1,0 +1,24 @@
+﻿#mainBody
+{
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#mainNav
+{
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+#mainContainer
+{
+    padding-top: 100px;
+    color: black;
+    font-weight: bolder;
+}
+
+#middleContainer
+{
+    background: rgba(64, 64, 64, 0.5);
+    border: 3px solid black;
+}

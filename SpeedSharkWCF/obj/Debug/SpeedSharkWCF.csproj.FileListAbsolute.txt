@@ -1,2 +1,9 @@
 d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\obj\Debug\SpeedSharkWCF.csprojResolveAssemblyReference.cache
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWCF\obj\Debug\SpeedSharkWCF.csprojResolveAssemblyReference.cache
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\bin\Debug\SpeedSharkWCF.dll.config
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\bin\Debug\SpeedSharkWCF.dll
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\bin\Debug\SpeedSharkWCF.pdb
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\bin\Debug\SpeedSharkServer.dll
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\bin\Debug\SpeedSharkServer.pdb
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\obj\Debug\SpeedSharkWCF.dll
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWCF\obj\Debug\SpeedSharkWCF.pdb

@@ -13,16 +13,19 @@ namespace SpeedSharkWCF
     public interface IEmployeeService
     {
         [OperationContract]
-        void insertEmployee(string fName, string lName, string username, string password);
+        void insertEmployee(string fName, string lName, string username, string password, string type);
 
         [OperationContract]
         Employee getEmployee(string username);
 
         [OperationContract]
-        void UpdateEmployee(string fName, string lName, string username, string password);
+        void updateEmployee(string fName, string lName, string username, string password, string type);
 
         [OperationContract]
         List<Employee> getEmployees();
+
+        [OperationContract]
+        string employeeLogin(string username, string password);
 
     }
 

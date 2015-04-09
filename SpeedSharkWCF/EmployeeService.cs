@@ -19,11 +19,12 @@ namespace SpeedSharkWCF
         private static readonly System.Object obj2 = new System.Object();
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
+        private static readonly System.Object obj5 = new System.Object();
 
         public Employee getEmployee(string username)
         {
             Employee servicEmployee = new Employee();
-            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            if (System.Threading.Monitor.TryEnter(obj1, 45000))
             {
                 try
                 {
@@ -40,18 +41,17 @@ namespace SpeedSharkWCF
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj2);
+                    System.Threading.Monitor.Exit(obj1);
                 }
 
             }
           
             return servicEmployee;
         }
-
-
-        public void UpdateEmployee(string fName, string lName, string username, string password, string type)
+        
+        public void updateEmployee(string fName, string lName, string username, string password, string type)
         {
-            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            if (System.Threading.Monitor.TryEnter(obj2, 45000))
             {
                 try
                 {
@@ -59,7 +59,7 @@ namespace SpeedSharkWCF
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj3); 
+                    System.Threading.Monitor.Exit(obj2); 
                 }
             }
         }
@@ -68,7 +68,7 @@ namespace SpeedSharkWCF
         {
             List<Employee> employees = new List<Employee>();
 
-            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            if (System.Threading.Monitor.TryEnter(obj3, 45000))
             {
                 try
                 {
@@ -95,7 +95,7 @@ namespace SpeedSharkWCF
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj4);
+                    System.Threading.Monitor.Exit(obj3);
                 }
             }
 
@@ -104,7 +104,7 @@ namespace SpeedSharkWCF
 
         public void insertEmployee(string fName, string lName, string username, string password, string type)
         {
-            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            if (System.Threading.Monitor.TryEnter(obj4, 45000))
             {
                 try
                 {
@@ -112,9 +112,30 @@ namespace SpeedSharkWCF
                 }
                 finally
                 {
-                    System.Threading.Monitor.Exit(obj1);
+                    System.Threading.Monitor.Exit(obj4);
                 }
             }
         }
+        
+        public string employeeLogin(string username, string password)
+        {
+            string employeeType = "Fail";
+
+            if(System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    employeeType = employeeCtr.employeeLogin(username, password);
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+
+            return employeeType;
+        }
+
     }
 }
