@@ -9,7 +9,7 @@ namespace SpeedSharkServer.DBHandler
 {
     public static class OrderHandler
     {
-        public static void CreateOrder(string custCVR, double price, int sessionId, int cargoId, string status)
+        public static void InsertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
         {
             using (var db = new SpeedSharkModelDataContext())
             {

@@ -4,39 +4,154 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using SpeedSharkServer.Controller;
 
 namespace SpeedSharkWCF
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "OrderService" in both code and config file together.
     public class OrderService : IOrderService
     {
-        public void DoWork()
-        {
-        }
+        private static OrderController orderCtr = OrderController.OrderControllerInstance;
 
-        public void createOrder(string custCVR, double price, int sessionId, int cargoId, string status)
+        private static readonly System.Object obj1 = new System.Object();
+        private static readonly System.Object obj2 = new System.Object();
+        private static readonly System.Object obj3 = new System.Object();
+        private static readonly System.Object obj4 = new System.Object();
+        private static readonly System.Object obj5 = new System.Object();
+        
+        
+        public void insertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
         {
-            throw new NotImplementedException();
+            if (System.Threading.Monitor.TryEnter(obj1, 45000))
+            {
+                try
+                {
+                    orderCtr.InsertOrder(custCVR, price, sessionId, cargoId, status);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj1);
+                }
+            }
         }
 
         public void updateOrder(int orderId, string custCVR, double price, int sessionId, int cargoId, string status)
         {
-            throw new NotImplementedException();
+            if (System.Threading.Monitor.TryEnter(obj2, 45000))
+                try
+                {
+                    orderCtr.updateOrder(orderId, custCVR, price, sessionId, cargoId, status);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj2);
+                }
         }
 
         public Order getOrder(int orderId)
         {
-            throw new NotImplementedException();
+            Order serviceOrder = new Order();
+
+            if (System.Threading.Monitor.TryEnter(obj3, 45000))
+            {
+                try
+                {
+                    serviceOrder.OrderId = orderCtr.getOrder(orderId).orderId;
+                    serviceOrder.CustCvr = orderCtr.getOrder(orderId).custCVR;
+                    serviceOrder.Price = orderCtr.getOrder(orderId).price;
+                    serviceOrder.SessionId = orderCtr.getOrder(orderId).sessionId;
+                    serviceOrder.CargoId = orderCtr.getOrder(orderId).cargoId;
+                    serviceOrder.Status = orderCtr.getOrder(orderId).status;
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj3);
+                }
+            }
+            return serviceOrder;
         }
 
         public List<Order> getOrders()
         {
-            throw new NotImplementedException();
+            List<Order> orders = new List<Order>();
+
+            if (System.Threading.Monitor.TryEnter(obj4, 45000))
+            {
+                try
+                {
+                    List<SpeedSharkServer.Model.Order> returnList = new List<SpeedSharkServer.Model.Order>();
+
+                    if (returnList.Count != 0)
+                    {
+                        foreach (SpeedSharkServer.Model.Order hostOrder in returnList)
+                        {
+                            Order serviceOrder = new Order();
+
+                            serviceOrder.OrderId = hostOrder.orderId;
+                            serviceOrder.CustCvr = hostOrder.custCVR;
+                            serviceOrder.Price = hostOrder.price;
+                            serviceOrder.SessionId = hostOrder.sessionId;
+                            serviceOrder.CargoId = hostOrder.cargoId;
+                            serviceOrder.Status = hostOrder.status;
+
+                            orders.Add(serviceOrder);
+                        }
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj4);
+                }
+            }
+
+            return orders;
         }
 
         public List<Order> getComletedOrders()
         {
-            throw new NotImplementedException();
+            List<Order> orders = new List<Order>();
+
+            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    List<SpeedSharkServer.Model.Order> returnList = new List<SpeedSharkServer.Model.Order>();
+
+                    if (returnList.Count != 0)
+                    {
+                        foreach (SpeedSharkServer.Model.Order hostOrder in returnList)
+                        {
+                            Order serviceOrder = new Order();
+
+                            serviceOrder.OrderId = hostOrder.orderId;
+                            serviceOrder.CustCvr = hostOrder.custCVR;
+                            serviceOrder.Price = hostOrder.price;
+                            serviceOrder.SessionId = hostOrder.sessionId;
+                            serviceOrder.CargoId = hostOrder.cargoId;
+                            serviceOrder.Status = hostOrder.status;
+
+                            orders.Add(serviceOrder);
+                        }
+                    }
+                }
+                catch (NullReferenceException)
+                {
+
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+            return orders;
         }
     }
 }
