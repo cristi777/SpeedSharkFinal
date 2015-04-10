@@ -156,6 +156,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Manager\Order.aspx" />
     <Content Include="Views\Manager\Sessions.aspx" />
     <Content Include="Views\Manager\Trucks.aspx" />
     <Content Include="Views\Manager\UpdateEmployee.aspx" />
@@ -240,6 +241,13 @@
     </Compile>
     <Compile Include="Views\Manager\Manager.Master.designer.cs">
       <DependentUpon>Manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\Order.aspx.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\Order.aspx.designer.cs">
+      <DependentUpon>Order.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\Sessions.aspx.cs">
       <DependentUpon>Sessions.aspx</DependentUpon>
