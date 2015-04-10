@@ -17,6 +17,7 @@ namespace SpeedSharkWCF
         private static readonly System.Object obj2 = new System.Object();
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
+        private static readonly System.Object obj5 = new System.Object();
 
         public void insertCargo(double weight)
         {
@@ -102,6 +103,25 @@ namespace SpeedSharkWCF
                 }
             }
             return cargoes;
+        }
+
+        public int getMaxId()
+        {
+            int maxId = 0;
+
+            if (System.Threading.Monitor.TryEnter(obj5, 45000))
+            {
+                try
+                {
+                    maxId = cargoCtr.getMaxId();
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj5);
+                }
+            }
+
+            return maxId;
         }
 
     }

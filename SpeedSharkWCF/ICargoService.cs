@@ -23,6 +23,9 @@ namespace SpeedSharkWCF
 
         [OperationContract]
         List<Cargo> getCargoes();
+
+        [OperationContract]
+        int getMaxId();
     }
 
     [DataContract]

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CargoService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/SpeedSharkWCF" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICargoService_insertCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertCargo" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_insertCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCargo" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_updateCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateCargo" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_updateCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getCargoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCargoes" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getCargoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCargoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getMaxId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxId" />
+  </wsdl:message>
+  <wsdl:message name="ICargoService_getMaxId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxIdResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICargoService">
+    <wsdl:operation name="insertCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICargoService/insertCargo" message="tns:ICargoService_insertCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICargoService/insertCargoResponse" message="tns:ICargoService_insertCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICargoService/getCargo" message="tns:ICargoService_getCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICargoService/getCargoResponse" message="tns:ICargoService_getCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateCargo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICargoService/updateCargo" message="tns:ICargoService_updateCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICargoService/updateCargoResponse" message="tns:ICargoService_updateCargo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCargoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICargoService/getCargoes" message="tns:ICargoService_getCargoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICargoService/getCargoesResponse" message="tns:ICargoService_getCargoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICargoService/getMaxId" message="tns:ICargoService_getMaxId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICargoService/getMaxIdResponse" message="tns:ICargoService_getMaxId_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICargoService" type="tns:ICargoService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertCargo">
+      <soap:operation soapAction="http://tempuri.org/ICargoService/insertCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCargo">
+      <soap:operation soapAction="http://tempuri.org/ICargoService/getCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCargo">
+      <soap:operation soapAction="http://tempuri.org/ICargoService/updateCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCargoes">
+      <soap:operation soapAction="http://tempuri.org/ICargoService/getCargoes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <soap:operation soapAction="http://tempuri.org/ICargoService/getMaxId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CargoService">
+    <wsdl:port name="BasicHttpBinding_ICargoService" binding="tns:BasicHttpBinding_ICargoService">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/SpeedSharkWCF/CargoService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

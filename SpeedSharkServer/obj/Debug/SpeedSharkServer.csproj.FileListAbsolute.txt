@@ -8,3 +8,4 @@ C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkServer\bin\Debug\S
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkServer\bin\Debug\SpeedSharkServer.pdb
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkServer\obj\Debug\SpeedSharkServer.dll
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkServer\obj\Debug\SpeedSharkServer.pdb
+d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkServer\obj\Debug\SpeedSharkServer.csprojResolveAssemblyReference.cache

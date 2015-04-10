@@ -10,6 +10,7 @@ namespace SpeedSharkWeb.Views.Manager
 {
     public partial class Order : System.Web.UI.Page
     {
+        private static CargoServiceReference.ICargoService cargoService = new CargoServiceReference.CargoServiceClient();
         private static SessionServiceReference.ISessionService sessionService = new SessionServiceReference.SessionServiceClient();
         private static TruckServiceReference.ITruckService truckService = new TruckServiceReference.TruckServiceClient();
         private static OrderServiceReference.IOrderService orderService = new OrderServiceReference.OrderServiceClient();
@@ -37,11 +38,9 @@ namespace SpeedSharkWeb.Views.Manager
             string departureTime = Convert.ToString(this.depTimeTxt.Text);
             string arrivalTime = Convert.ToString(this.arrTimeTxt.Text);
 
-            //cargo insert here
-
-            //get max cargo id
+            cargoService.insertCargo(cargoWeight);
             Thread.Sleep(1000);
-            int maxCargoId = 0;
+            int maxCargoId = cargoService.getMaxId();
 
             
             sessionService.insertSession(maxCargoId, departureTime, arrivalTime, truckNumber, destinationAddress, destinationCity);
