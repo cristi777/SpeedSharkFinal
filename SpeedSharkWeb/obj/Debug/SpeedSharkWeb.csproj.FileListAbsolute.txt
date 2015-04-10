@@ -13,3 +13,4 @@ C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedShark
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedSharkWeb.pdb
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.dll
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.pdb
+D:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.csprojResolveAssemblyReference.cache
