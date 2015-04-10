@@ -1,11 +1,13 @@
 ﻿#mainBody
 {
+    background-image: url('../Images/backgroundforallpages.jpg');
     background-repeat:no-repeat;
     background-size:cover;
 }
 
 #mainNav
 {
+    background-image: url('../Images/nav.jpg');
     background-repeat:no-repeat;
     background-size:cover;
 }
@@ -19,6 +21,6 @@
 
 #middleContainer
 {
-    background: rgba(64, 64, 64, 0.5);
+    background: rgba(224, 224, 224, 0.5);
     border: 3px solid black;
 }

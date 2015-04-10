@@ -45,10 +45,11 @@ namespace SpeedSharkServer.Controller
         {
             return SessionHandler.GetSession(sessionId);
         }
-
+        
+       
         public static List<Session> GetSessions()
         {
-            return SessionHandler.GetSession();
+            return SessionHandler.GetSessions();
         }
 
         public static List<Session> GetOngoingSession()

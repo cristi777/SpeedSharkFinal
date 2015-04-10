@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../../Style/StyleSheetLogin.css" />
+    <link rel="stylesheet" href="../../Style/MainStyleSheet.css" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -26,18 +26,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <img class="img-responsive" style="height:100px; width:100px;" src=""/>
+                    <img class="img-responsive" style="height:100px; width:100px;" src="../../Images/logo.jpg"/>
                 </div>
 
-                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="font-family:'Microsoft Sans Serif'; font-size:x-large;">
                     <ul class="nav navbar-nav">
-                        <li><a> Home </a></li>
-                        <li><a> Trucks </a></li>
-                        <li><a> Sessions </a></li>
-                        <li><a> Order </a></li>
-                        <li><a> Statistics </a></li>
-                        <li><a> Employee </a></li>
-                        <li><a> Contact </a></li>
+                        <li> <a href="Login.aspx"> Login </a> </li>
                     </ul>
                 </div>
 
