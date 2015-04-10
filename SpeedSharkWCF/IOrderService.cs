@@ -13,7 +13,7 @@ namespace SpeedSharkWCF
     public interface IOrderService
     {
         [OperationContract]
-        void createOrder(string custCVR, double price, int sessionId, int cargoId, string status);
+        void insertOrder(string custCVR, double price, int sessionId, int cargoId, string status);
    
         [OperationContract]
         void updateOrder(int orderId, string custCVR, double price, int sessionId, int cargoId, string status);

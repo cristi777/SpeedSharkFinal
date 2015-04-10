@@ -15,7 +15,7 @@ namespace SpeedSharkServer.Controller
 
         private OrderController() { }
 
-        private static OrderController OrderControllerInstance
+        public static OrderController OrderControllerInstance
         {
             get
             {
@@ -27,9 +27,9 @@ namespace SpeedSharkServer.Controller
             }
         }
 
-        public void createOrder(string custCVR, double price, int sessionId, int cargoId, string status)
+        public void InsertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
         {
-            OrderHandler.CreateOrder(custCVR, price, sessionId, cargoId, status);
+            OrderHandler.InsertOrder(custCVR, price, sessionId, cargoId, status);
         }
 
         public void updateOrder(int orderId, string custCVR, double price, int sessionId, int cargoId, string status)
