@@ -36,7 +36,7 @@
                         <li><a href="Sessions.aspx"> Sessions </a></li>
                         <li><a> Order </a></li>
                         <li><a> Statistics </a></li>
-                        <li><a> Employee </a></li>
+                        <li><a href="Employee.aspx"> Employee </a></li>
                         <li><a> Contact </a></li>
                     </ul>
                 </div>
