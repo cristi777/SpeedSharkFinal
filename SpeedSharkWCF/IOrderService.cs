@@ -27,6 +27,9 @@ namespace SpeedSharkWCF
         [OperationContract]
         List<Order> getComletedOrders();
 
+        [OperationContract]
+        void cancelOrder(int sessionId);
+
     }
 
     [DataContract]

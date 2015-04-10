@@ -21,13 +21,14 @@ namespace SpeedSharkWCF
         private static readonly System.Object obj5 = new System.Object();
 
 
-        public void CreateSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public void insertSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             if (System.Threading.Monitor.TryEnter(obj1, 45000))
             {
                 try
                 {
-                    sessionCtr.CreateSession( cargoId,  departureTime,  arrivalTime,  truckId,  destAddress,  destCity);
+                    
+                    sessionCtr.insertSession( cargoId,  departureTime,  arrivalTime,  truckId,  destAddress,  destCity);
                 }
                 finally
                 {
@@ -36,13 +37,13 @@ namespace SpeedSharkWCF
             }
         }
 
-        public void UpdateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public void updateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             if (System.Threading.Monitor.TryEnter(obj2, 45000))
             {
                 try
                 {
-                    sessionCtr.UpdateSession( sessionId,  cargoId,  departureTime,  arrivalTime,  truckId,  destAddress,  destCity);
+                    sessionCtr.updateSession( sessionId,  cargoId,  departureTime,  arrivalTime,  truckId,  destAddress,  destCity);
                 }
                 finally
                 {
@@ -51,7 +52,7 @@ namespace SpeedSharkWCF
             }
         }
 
-        public Session GetSession(int sessionId)
+        public Session getSession(int sessionId)
         {
             Session serviceSession = new Session();
 
@@ -59,13 +60,13 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    serviceSession.SessionId = sessionCtr.GetSession(sessionId).sessionId;
-                    serviceSession.CargoId = sessionCtr.GetSession(sessionId).cargoId;
-                    serviceSession.DepartureTime = sessionCtr.GetSession(sessionId).departureTime;
-                    serviceSession.ArrivalTime = sessionCtr.GetSession(sessionId).arrivalTime;
-                    serviceSession.DestAddress = sessionCtr.GetSession(sessionId).destAddress;
-                    serviceSession.DestCity = sessionCtr.GetSession(sessionId).destCity;
-                    serviceSession.TruckId = sessionCtr.GetSession(sessionId).truckId;
+                    serviceSession.SessionId = sessionCtr.getSession(sessionId).sessionId;
+                    serviceSession.CargoId = sessionCtr.getSession(sessionId).cargoId;
+                    serviceSession.DepartureTime = sessionCtr.getSession(sessionId).departureTime;
+                    serviceSession.ArrivalTime = sessionCtr.getSession(sessionId).arrivalTime;
+                    serviceSession.DestAddress = sessionCtr.getSession(sessionId).destAddress;
+                    serviceSession.DestCity = sessionCtr.getSession(sessionId).destCity;
+                    serviceSession.TruckId = sessionCtr.getSession(sessionId).truckId;
                 }
                 catch (NullReferenceException)
                 {
@@ -79,7 +80,7 @@ namespace SpeedSharkWCF
             return serviceSession;
         }
 
-        public List<Session> GetSessions()
+        public List<Session> getSessions()
         {
             List<Session> sessions = new List<Session>();
 
@@ -87,7 +88,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Session> returnList = new List<SpeedSharkServer.Model.Session>();
+                    List<SpeedSharkServer.Model.Session> returnList = sessionCtr.getSessions();
 
                     if (returnList.Count != 0)
                     {
@@ -119,7 +120,7 @@ namespace SpeedSharkWCF
             return sessions;
         }
 
-        public List<Session> GetOngoingSession()
+        public List<Session> getOngoingSessions()
         {
             List<Session> sessions = new List<Session>();
 
@@ -127,7 +128,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Session> returnList = new List<SpeedSharkServer.Model.Session>();
+                    List<SpeedSharkServer.Model.Session> returnList = sessionCtr.getOngoingSessions();
 
                     if (returnList.Count != 0)
                     {

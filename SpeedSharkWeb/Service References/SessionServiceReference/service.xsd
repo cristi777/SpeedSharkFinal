@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/SpeedSharkWCF" />
+  <xs:element name="insertSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cargoId" type="xs:int" />
+        <xs:element minOccurs="0" name="departureTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="arrivalTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="truckId" type="xs:int" />
+        <xs:element minOccurs="0" name="destAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destCity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insertSessionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" type="xs:int" />
+        <xs:element minOccurs="0" name="cargoId" type="xs:int" />
+        <xs:element minOccurs="0" name="departureTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="arrivalTime" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="truckId" type="xs:int" />
+        <xs:element minOccurs="0" name="destAddress" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="destCity" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updateSessionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSession">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSessionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SpeedSharkWCF" minOccurs="0" name="getSessionResult" nillable="true" type="q1:Session" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSessions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SpeedSharkWCF" minOccurs="0" name="getSessionsResult" nillable="true" type="q2:ArrayOfSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOngoingSessions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getOngoingSessionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SpeedSharkWCF" minOccurs="0" name="getOngoingSessionsResult" nillable="true" type="q3:ArrayOfSession" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

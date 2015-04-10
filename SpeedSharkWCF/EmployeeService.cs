@@ -72,7 +72,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Employee> returnList = new List<SpeedSharkServer.Model.Employee>();
+                    List<SpeedSharkServer.Model.Employee> returnList = employeeCtr.getEmployees();
 
                     if (returnList.Count != 0)
                     {

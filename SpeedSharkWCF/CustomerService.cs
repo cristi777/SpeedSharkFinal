@@ -85,7 +85,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Customer> returnList = new List<SpeedSharkServer.Model.Customer>();
+                    List<SpeedSharkServer.Model.Customer> returnList = customerCtr.getCustomers();
 
                     if (returnList.Count != 0)
                     {

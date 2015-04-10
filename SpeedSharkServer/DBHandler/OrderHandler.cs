@@ -96,5 +96,18 @@ namespace SpeedSharkServer.DBHandler
 
             return orders;
         }
+
+        public static void CancelOrder(int sessionId)
+        {
+            var order = new Order();
+
+            using(var db = new SpeedSharkModelDataContext())
+            {
+                order = db.Orders.SingleOrDefault(ord => ord.sessionId == sessionId);
+                order.status = "Canceled";
+
+                db.SubmitChanges();
+            }
+        }
     }
 }

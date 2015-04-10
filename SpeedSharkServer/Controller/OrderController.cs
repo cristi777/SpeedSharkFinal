@@ -27,7 +27,7 @@ namespace SpeedSharkServer.Controller
             }
         }
 
-        public void InsertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
+        public void insertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
         {
             OrderHandler.InsertOrder(custCVR, price, sessionId, cargoId, status);
         }
@@ -50,6 +50,11 @@ namespace SpeedSharkServer.Controller
         public List<Order> getComletedOrders()
         {
             return OrderHandler.GetCompletedOrders();
+        }
+
+        public void cancelOrder(int sessionId)
+        {
+            OrderHandler.CancelOrder(sessionId);
         }
     }
 }

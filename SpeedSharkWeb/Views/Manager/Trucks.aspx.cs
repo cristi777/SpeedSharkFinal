@@ -24,8 +24,8 @@ namespace SpeedSharkWeb.Views.Manager
             switch(e.CommandName.ToString())
             {
                 case "truckUpdate":
-                    int userId = Convert.ToInt32(e.CommandArgument);
-                    Session["userId"] = userId;
+                    int truckId = Convert.ToInt32(e.CommandArgument);
+                    Session["truckId"] = truckId;
                     Response.Redirect("~/Views/Manager/UpdateTruck.aspx");
                     break;
                 default:
