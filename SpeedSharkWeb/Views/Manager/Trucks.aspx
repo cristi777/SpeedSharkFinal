@@ -30,7 +30,7 @@
 
     </div>
     <br />
-    <div class="col-md-2 col-md-offset-1">
+    <div class="col-md-2">
 
         <asp:Button ID="createButton" Text="Add new truck" runat="server" OnClick="createButton_Click" />
 

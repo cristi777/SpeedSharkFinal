@@ -9,6 +9,7 @@ namespace SpeedSharkWeb.Views.Manager
 {
     public partial class AddEmployee : System.Web.UI.Page
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 

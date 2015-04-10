@@ -32,7 +32,7 @@ namespace SpeedSharkWeb.Views.Login
                     }
                 case "Manager":
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/Views/Manager/Home.aspx");
                         break;
                     }
                 case "Driver":
@@ -42,7 +42,7 @@ namespace SpeedSharkWeb.Views.Login
                     }
                 default:
                     {
-                        Response.Redirect("");
+                        Response.Redirect("~/Views/Login/Error.aspx");
                         break;
                     }
             }
