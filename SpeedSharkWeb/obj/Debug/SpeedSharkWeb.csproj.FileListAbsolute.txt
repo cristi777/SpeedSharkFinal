@@ -8,7 +8,6 @@ d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\bin\S
 d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedSharkWeb.pdb
 d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.dll
 d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.pdb
-d:\Workspace\Visual Studio\Cristi SpeedShark\SpeedSharkFinal\SpeedSharkWeb\obj\Debug\SpeedSharkWeb.csprojResolveAssemblyReference.cache
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedSharkWeb.dll.config
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedSharkWeb.dll
 C:\Users\Cristi\SkyDrive\speedshark\SpeedSharkFinal\SpeedSharkWeb\bin\SpeedSharkWeb.pdb

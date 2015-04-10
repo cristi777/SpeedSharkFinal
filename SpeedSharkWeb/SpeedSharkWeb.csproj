@@ -69,6 +69,31 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="Service References\OrderServiceReference\service.wsdl" />
+    <None Include="Service References\OrderServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServiceReference\SpeedSharkWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\OrderServiceReference\SpeedSharkWeb.OrderServiceReference.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SessionServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\SessionServiceReference\configuration.svcinfo" />
+    <None Include="Service References\SessionServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\OrderServiceReference\configuration91.svcinfo" />
+    <Content Include="Service References\OrderServiceReference\configuration.svcinfo" />
+    <Content Include="Service References\OrderServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <Content Include="Service References\TruckServiceReference\configuration91.svcinfo" />
     <Content Include="Service References\TruckServiceReference\configuration.svcinfo" />
     <Content Include="Service References\TruckServiceReference\Reference.svcmap">
@@ -92,10 +117,25 @@
     <Content Include="Service References\EmployeeServiceReference\SpeedSharkWeb.EmployeeServiceReference.Employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Views\Manager\AddEmployee.aspx" />
     <Content Include="Views\Manager\AddTruck.aspx" />
+    <Content Include="Views\Manager\Employee.aspx" />
     <Content Include="Views\Manager\Home.aspx" />
     <Content Include="Views\Manager\Manager.Master" />
     <Content Include="Service References\TruckServiceReference\service.wsdl" />
+    <None Include="Service References\SessionServiceReference\service.wsdl" />
+    <None Include="Service References\SessionServiceReference\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SessionServiceReference\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SessionServiceReference\SpeedSharkWCF.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\SessionServiceReference\SpeedSharkWeb.SessionServiceReference.Session.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\TruckServiceReference\service.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -116,13 +156,26 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Views\Manager\Sessions.aspx" />
     <Content Include="Views\Manager\Trucks.aspx" />
+    <Content Include="Views\Manager\UpdateEmployee.aspx" />
+    <Content Include="Views\Manager\UpdateSession.aspx" />
     <Content Include="Views\Manager\UpdateTruck.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\EmployeeServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SessionServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -153,12 +206,26 @@
     <Compile Include="Views\Login\Login.Master.designer.cs">
       <DependentUpon>Login.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manager\AddEmployee.aspx.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\AddEmployee.aspx.designer.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manager\AddTruck.aspx.cs">
       <DependentUpon>AddTruck.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Manager\AddTruck.aspx.designer.cs">
       <DependentUpon>AddTruck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\Employee.aspx.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\Employee.aspx.designer.cs">
+      <DependentUpon>Employee.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -174,12 +241,33 @@
     <Compile Include="Views\Manager\Manager.Master.designer.cs">
       <DependentUpon>Manager.Master</DependentUpon>
     </Compile>
+    <Compile Include="Views\Manager\Sessions.aspx.cs">
+      <DependentUpon>Sessions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\Sessions.aspx.designer.cs">
+      <DependentUpon>Sessions.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Manager\Trucks.aspx.cs">
       <DependentUpon>Trucks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Manager\Trucks.aspx.designer.cs">
       <DependentUpon>Trucks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\UpdateEmployee.aspx.cs">
+      <DependentUpon>UpdateEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\UpdateEmployee.aspx.designer.cs">
+      <DependentUpon>UpdateEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Manager\UpdateSession.aspx.cs">
+      <DependentUpon>UpdateSession.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Manager\UpdateSession.aspx.designer.cs">
+      <DependentUpon>UpdateSession.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Manager\UpdateTruck.aspx.cs">
       <DependentUpon>UpdateTruck.aspx</DependentUpon>
@@ -198,6 +286,8 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\EmployeeServiceReference\" />
+    <WCFMetadataStorage Include="Service References\OrderServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SessionServiceReference\" />
     <WCFMetadataStorage Include="Service References\TruckServiceReference\" />
   </ItemGroup>
   <PropertyGroup>

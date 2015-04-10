@@ -17,42 +17,39 @@ namespace SpeedSharkServer.Controller
 
         }
 
-        public static SessionController SessionControllerInstnance 
-       {
-           get
-           {
-               if (instance == null)
-               {
-                   instance = new SessionController();
-               }
-               return instance;
-           }
-       }
+        public static SessionController SessionControllerInstnance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new SessionController();
+                }
+                return instance;
+            }
+        }
 
-
-
-        public static void CreateSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public void insertSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             SessionHandler.CreateSession(cargoId, departureTime, arrivalTime, truckId, destAddress, destCity);
         }
 
-        public static void UpdateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
+        public void updateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
         {
             SessionHandler.UpdateSession(sessionId, cargoId, departureTime, arrivalTime, truckId, destAddress, destCity);
         }
 
-        public static Session GetSession(int sessionId)
+        public Session getSession(int sessionId)
         {
             return SessionHandler.GetSession(sessionId);
-        }
-        
+        }        
        
-        public static List<Session> GetSessions()
+        public List<Session> getSessions()
         {
             return SessionHandler.GetSessions();
         }
 
-        public static List<Session> GetOngoingSession()
+        public List<Session> getOngoingSessions()
         {
             return SessionHandler.GetOngoingSession();
         }

@@ -18,6 +18,7 @@ namespace SpeedSharkWCF
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
         private static readonly System.Object obj5 = new System.Object();
+        private static readonly System.Object obj6 = new System.Object();
         
         
         public void insertOrder(string custCVR, double price, int sessionId, int cargoId, string status)
@@ -26,7 +27,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    orderCtr.InsertOrder(custCVR, price, sessionId, cargoId, status);
+                    orderCtr.insertOrder(custCVR, price, sessionId, cargoId, status);
                 }
                 finally
                 {
@@ -38,6 +39,7 @@ namespace SpeedSharkWCF
         public void updateOrder(int orderId, string custCVR, double price, int sessionId, int cargoId, string status)
         {
             if (System.Threading.Monitor.TryEnter(obj2, 45000))
+            {
                 try
                 {
                     orderCtr.updateOrder(orderId, custCVR, price, sessionId, cargoId, status);
@@ -46,6 +48,7 @@ namespace SpeedSharkWCF
                 {
                     System.Threading.Monitor.Exit(obj2);
                 }
+            }
         }
 
         public Order getOrder(int orderId)
@@ -72,6 +75,7 @@ namespace SpeedSharkWCF
                     System.Threading.Monitor.Exit(obj3);
                 }
             }
+
             return serviceOrder;
         }
 
@@ -83,7 +87,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Order> returnList = new List<SpeedSharkServer.Model.Order>();
+                    List<SpeedSharkServer.Model.Order> returnList = orderCtr.getOrders();
 
                     if (returnList.Count != 0)
                     {
@@ -123,7 +127,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Order> returnList = new List<SpeedSharkServer.Model.Order>();
+                    List<SpeedSharkServer.Model.Order> returnList = orderCtr.getComletedOrders();
 
                     if (returnList.Count != 0)
                     {
@@ -151,7 +155,23 @@ namespace SpeedSharkWCF
                     System.Threading.Monitor.Exit(obj5);
                 }
             }
+
             return orders;
+        }
+
+        public void cancelOrder(int sessionId)
+        {
+            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            {
+                try
+                {
+                    orderCtr.cancelOrder(sessionId);
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj6);
+                }
+            }
         }
     }
 }

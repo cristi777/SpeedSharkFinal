@@ -13,21 +13,21 @@ namespace SpeedSharkWCF
     public interface ISessionService
     {
         [OperationContract]
-        void CreateSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress,
+        void insertSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress,
             string destCity);
 
         [OperationContract]
-        void UpdateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId,
+        void updateSession(int sessionId, int cargoId, string departureTime, string arrivalTime, int truckId,
             string destAddress, string destCity);
 
         [OperationContract]
-        Session GetSession(int sessionId);
+        Session getSession(int sessionId);
 
         [OperationContract]
-        List<Session> GetSessions();
+        List<Session> getSessions();
 
         [OperationContract]
-        List<Session> GetOngoingSession();
+        List<Session> getOngoingSessions();
     }
 
     [DataContract]

@@ -84,7 +84,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Truck> returnList = new List<SpeedSharkServer.Model.Truck>();
+                    List<SpeedSharkServer.Model.Truck> returnList = truckCtr.getTrucks();
 
                     if (returnList.Count != 0)
                     {
@@ -120,7 +120,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Truck> returnList = new List<SpeedSharkServer.Model.Truck>();
+                    List<SpeedSharkServer.Model.Truck> returnList = truckCtr.getFunctionalTrucks();
 
                     if (returnList.Count != 0)
                     {
@@ -157,7 +157,7 @@ namespace SpeedSharkWCF
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Truck> returnList = new List<SpeedSharkServer.Model.Truck>();
+                    List<SpeedSharkServer.Model.Truck> returnList = truckCtr.getAvailableTrucks();
 
                     if (returnList.Count != 0)
                     {
