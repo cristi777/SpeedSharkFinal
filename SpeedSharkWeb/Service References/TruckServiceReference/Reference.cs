@@ -103,16 +103,16 @@ namespace SpeedSharkWeb.TruckServiceReference {
         System.Threading.Tasks.Task<SpeedSharkWeb.TruckServiceReference.Truck[]> getTrucksAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITruckService/getFunctionalTrucks", ReplyAction="http://tempuri.org/ITruckService/getFunctionalTrucksResponse")]
-        SpeedSharkWeb.TruckServiceReference.Truck[] getFunctionalTrucks();
+        int[] getFunctionalTrucks();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITruckService/getFunctionalTrucks", ReplyAction="http://tempuri.org/ITruckService/getFunctionalTrucksResponse")]
-        System.Threading.Tasks.Task<SpeedSharkWeb.TruckServiceReference.Truck[]> getFunctionalTrucksAsync();
+        System.Threading.Tasks.Task<int[]> getFunctionalTrucksAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITruckService/getAvailableTrucks", ReplyAction="http://tempuri.org/ITruckService/getAvailableTrucksResponse")]
-        SpeedSharkWeb.TruckServiceReference.Truck[] getAvailableTrucks();
+        int[] getAvailableTrucks();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITruckService/getAvailableTrucks", ReplyAction="http://tempuri.org/ITruckService/getAvailableTrucksResponse")]
-        System.Threading.Tasks.Task<SpeedSharkWeb.TruckServiceReference.Truck[]> getAvailableTrucksAsync();
+        System.Threading.Tasks.Task<int[]> getAvailableTrucksAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -174,19 +174,19 @@ namespace SpeedSharkWeb.TruckServiceReference {
             return base.Channel.getTrucksAsync();
         }
         
-        public SpeedSharkWeb.TruckServiceReference.Truck[] getFunctionalTrucks() {
+        public int[] getFunctionalTrucks() {
             return base.Channel.getFunctionalTrucks();
         }
         
-        public System.Threading.Tasks.Task<SpeedSharkWeb.TruckServiceReference.Truck[]> getFunctionalTrucksAsync() {
+        public System.Threading.Tasks.Task<int[]> getFunctionalTrucksAsync() {
             return base.Channel.getFunctionalTrucksAsync();
         }
         
-        public SpeedSharkWeb.TruckServiceReference.Truck[] getAvailableTrucks() {
+        public int[] getAvailableTrucks() {
             return base.Channel.getAvailableTrucks();
         }
         
-        public System.Threading.Tasks.Task<SpeedSharkWeb.TruckServiceReference.Truck[]> getAvailableTrucksAsync() {
+        public System.Threading.Tasks.Task<int[]> getAvailableTrucksAsync() {
             return base.Channel.getAvailableTrucksAsync();
         }
     }

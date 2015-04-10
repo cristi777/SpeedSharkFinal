@@ -94,12 +94,12 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Service References\TruckServiceReference\configuration91.svcinfo" />
-    <Content Include="Service References\TruckServiceReference\configuration.svcinfo" />
-    <Content Include="Service References\TruckServiceReference\Reference.svcmap">
+    <None Include="Service References\TruckServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\TruckServiceReference\configuration.svcinfo" />
+    <None Include="Service References\TruckServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Style\MainStyleSheet.css" />
     <Content Include="Views\Login\Error.aspx" />
     <Content Include="Views\Login\Login.aspx" />
@@ -122,7 +122,10 @@
     <Content Include="Views\Manager\Employee.aspx" />
     <Content Include="Views\Manager\Home.aspx" />
     <Content Include="Views\Manager\Manager.Master" />
-    <Content Include="Service References\TruckServiceReference\service.wsdl" />
+    <None Include="Service References\TruckServiceReference\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\TruckServiceReference\service.wsdl" />
     <None Include="Service References\SessionServiceReference\service.wsdl" />
     <None Include="Service References\SessionServiceReference\service.xsd">
       <SubType>Designer</SubType>

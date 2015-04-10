@@ -19,6 +19,7 @@ namespace SpeedSharkWCF
         private static readonly System.Object obj3 = new System.Object();
         private static readonly System.Object obj4 = new System.Object();
         private static readonly System.Object obj5 = new System.Object();
+        private static readonly System.Object obj6 = new System.Object();
 
 
         public void insertSession(int cargoId, string departureTime, string arrivalTime, int truckId, string destAddress, string destCity)
@@ -158,6 +159,25 @@ namespace SpeedSharkWCF
             }
 
             return sessions;
+        }
+
+        public int getMaxId()
+        {
+            int maxId = 0;
+
+            if (System.Threading.Monitor.TryEnter(obj6, 45000))
+            {
+                try
+                {
+                    maxId = sessionCtr.getMaxId();
+                }
+                finally
+                {
+                    System.Threading.Monitor.Exit(obj6);
+                }
+            }
+
+            return maxId;
         }
     }
 }

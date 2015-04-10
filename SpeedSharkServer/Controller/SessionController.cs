@@ -53,5 +53,11 @@ namespace SpeedSharkServer.Controller
         {
             return SessionHandler.GetOngoingSession();
         }
+
+        public int getMaxId()
+        {
+            return SessionHandler.GetMaxId();
+        
+        }
     }
 }

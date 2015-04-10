@@ -26,6 +26,7 @@
     <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="3117546d-358e-4b45-a115-11ef03110980" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SpeedSharkWCF/TruckService/mex" />
     <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="31d94753-88b2-425b-834c-5d0eb4d00fe1" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SpeedSharkWCF/TruckService/mex" />
     <MetadataFile FileName="SpeedSharkWCF.xsd" MetadataType="Schema" ID="fb3e1718-ae6a-4993-8349-a1bcc68043c4" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SpeedSharkWCF/TruckService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="b0ab0094-973b-4fca-82e5-7f5e9857c367" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/SpeedSharkWCF/TruckService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

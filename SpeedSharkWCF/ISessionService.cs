@@ -28,6 +28,9 @@ namespace SpeedSharkWCF
 
         [OperationContract]
         List<Session> getOngoingSessions();
+
+        [OperationContract]
+        int getMaxId();
     }
 
     [DataContract]

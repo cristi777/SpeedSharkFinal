@@ -46,5 +46,10 @@ namespace SpeedSharkServer.Controller
         {
             return CargoHandler.GetCargoes();
         }
+
+        public int getMaxId()
+        {
+            return CargoHandler.GetMaxId();
+        }
     }
 }

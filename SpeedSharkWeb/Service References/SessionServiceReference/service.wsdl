@@ -37,6 +37,12 @@
   <wsdl:message name="ISessionService_getOngoingSessions_OutputMessage">
     <wsdl:part name="parameters" element="tns:getOngoingSessionsResponse" />
   </wsdl:message>
+  <wsdl:message name="ISessionService_getMaxId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxId" />
+  </wsdl:message>
+  <wsdl:message name="ISessionService_getMaxId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getMaxIdResponse" />
+  </wsdl:message>
   <wsdl:portType name="ISessionService">
     <wsdl:operation name="insertSession">
       <wsdl:input wsaw:Action="http://tempuri.org/ISessionService/insertSession" message="tns:ISessionService_insertSession_InputMessage" />
@@ -57,6 +63,10 @@
     <wsdl:operation name="getOngoingSessions">
       <wsdl:input wsaw:Action="http://tempuri.org/ISessionService/getOngoingSessions" message="tns:ISessionService_getOngoingSessions_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ISessionService/getOngoingSessionsResponse" message="tns:ISessionService_getOngoingSessions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISessionService/getMaxId" message="tns:ISessionService_getMaxId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISessionService/getMaxIdResponse" message="tns:ISessionService_getMaxId_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ISessionService" type="tns:ISessionService">
@@ -99,6 +109,15 @@
     </wsdl:operation>
     <wsdl:operation name="getOngoingSessions">
       <soap:operation soapAction="http://tempuri.org/ISessionService/getOngoingSessions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMaxId">
+      <soap:operation soapAction="http://tempuri.org/ISessionService/getMaxId" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

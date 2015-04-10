@@ -94,5 +94,20 @@ namespace SpeedSharkServer.DBHandler
 
             return sessions;
         }
+
+        public static int GetMaxId()
+        {
+            int maxId = 0;
+
+            using (var db = new SpeedSharkModelDataContext())
+            {
+                var query = db.Sessions.OrderByDescending(sess => sess.sessionId).SingleOrDefault().sessionId;
+                if (query != 0 && query != null)
+                {
+                    maxId = query;
+                }
+            }
+            return maxId;
+        }
     }
 }

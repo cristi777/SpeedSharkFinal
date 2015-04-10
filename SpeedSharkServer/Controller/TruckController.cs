@@ -48,12 +48,12 @@ namespace SpeedSharkServer.Controller
            return TruckHandler.GetTrucks();
        }
 
-       public List<Truck> getFunctionalTrucks()
+       public List<int> getFunctionalTrucks()
        {
            return TruckHandler.GetFunctionalTrucks();
        }
 
-       public List<Truck> getAvailableTrucks()
+       public List<int> getAvailableTrucks()
        {
            return TruckHandler.GetAvailableTrucks();
        }

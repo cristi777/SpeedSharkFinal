@@ -63,24 +63,29 @@ namespace SpeedSharkServer.DBHandler
             return trucks;
         }
 
-        //get the trucks that are not currently in service
-        public static List<Truck> GetFunctionalTrucks()
+        //get the truck ids that are not currently in service
+        public static List<int> GetFunctionalTrucks()
         {
-            var trucks = new List<Truck>();
+            var truckNumb = new List<int>();
 
             using (var db = new SpeedSharkModelDataContext())
             {
                 var query = db.Trucks.Where(trk => trk.status.Equals("Available") == true).ToList();
-                trucks = query;
+                List<Truck> trucks = query;
+
+                foreach(Truck truck in trucks)
+                {
+                    truckNumb.Add(truck.truckId);
+                }
             }
 
-            return trucks;
+            return truckNumb;
         }
 
-        //get the trucks that are not in service and do not have any future session from now
-        public static List<Truck> GetAvailableTrucks()
+        //get the trucks ids that are not in service and do not have any future session from now
+        public static List<int> GetAvailableTrucks()
         {
-            var availableTrucks = new List<Truck>();
+            var truckNumbers = new List<int>();
 
             using (var db = new SpeedSharkModelDataContext())
             {
@@ -101,16 +106,19 @@ namespace SpeedSharkServer.DBHandler
 
                 var arrayFinal = array1.Except(array2).ToArray<int>();
 
-                foreach (int truckId in arrayFinal)
-                {
-                    var truck = new Truck();
-                    truck = db.Trucks.SingleOrDefault(trk => trk.truckId == truckId && trk.status == "Available");
-                    availableTrucks.Add(truck);
-                }
+                truckNumbers = arrayFinal.ToList();
+                /*
+                               foreach (int truckId in arrayFinal)
+                                {
+                                        var truck = new Truck();
+                                        truck = db.Trucks.SingleOrDefault(trk => trk.truckId == truckId && trk.status == "Available");
+                                        availableTrucks.Add(truck);
+                                }
+                                */
 
             }
 
-            return availableTrucks;
+            return truckNumbers;
         }
     }
 }

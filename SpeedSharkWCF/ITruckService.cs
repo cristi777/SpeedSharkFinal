@@ -24,10 +24,10 @@ namespace SpeedSharkWCF
         List<Truck> getTrucks();
 
         [OperationContract]
-        List<Truck> getFunctionalTrucks();
+        List<int> getFunctionalTrucks();
 
         [OperationContract]
-        List<Truck> getAvailableTrucks();
+        List<int> getAvailableTrucks();
 
     
     }

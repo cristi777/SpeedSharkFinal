@@ -187,6 +187,12 @@ namespace SpeedSharkWeb.SessionServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISessionService/getOngoingSessions", ReplyAction="http://tempuri.org/ISessionService/getOngoingSessionsResponse")]
         System.Threading.Tasks.Task<SpeedSharkWeb.SessionServiceReference.Session[]> getOngoingSessionsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISessionService/getMaxId", ReplyAction="http://tempuri.org/ISessionService/getMaxIdResponse")]
+        int getMaxId();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISessionService/getMaxId", ReplyAction="http://tempuri.org/ISessionService/getMaxIdResponse")]
+        System.Threading.Tasks.Task<int> getMaxIdAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -254,6 +260,14 @@ namespace SpeedSharkWeb.SessionServiceReference {
         
         public System.Threading.Tasks.Task<SpeedSharkWeb.SessionServiceReference.Session[]> getOngoingSessionsAsync() {
             return base.Channel.getOngoingSessionsAsync();
+        }
+        
+        public int getMaxId() {
+            return base.Channel.getMaxId();
+        }
+        
+        public System.Threading.Tasks.Task<int> getMaxIdAsync() {
+            return base.Channel.getMaxIdAsync();
         }
     }
 }

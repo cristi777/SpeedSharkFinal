@@ -62,5 +62,20 @@ namespace SpeedSharkServer.DBHandler
 
             return cargoes;
         }
+
+        public static int GetMaxId()
+        {
+            int maxId = 0;
+
+            using(var db = new SpeedSharkModelDataContext())
+            {
+                var query = db.Cargos.OrderByDescending(carg => carg.cargoId).SingleOrDefault().cargoId;
+                if (query != 0 && query != null)
+                {
+                    maxId = query;
+                }
+            }
+            return maxId;
+        }
     }
 }

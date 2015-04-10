@@ -38,7 +38,7 @@
     </div>
 
     <br />
-    <div class =" row">
+    <div class ="row">
         <div class="col-md-2">
 
             <asp:Button ID="createButton" Text="Add new employee" runat="server" OnClick="createButton_Click" />

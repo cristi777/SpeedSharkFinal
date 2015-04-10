@@ -13,5 +13,10 @@ namespace SpeedSharkWeb.Views.Login
         {
 
         }
+
+        protected void returnButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Login/Login.aspx");
+        }
     }
 }

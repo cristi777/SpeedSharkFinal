@@ -22,7 +22,7 @@ namespace SpeedSharkServer.DBHandler
                     maxOrderId = query;
                 }
 
-                string orderNo = DateTime.Now.ToString("yy-MM-dd") + "/" + Convert.ToString(maxOrderId + 1);
+                string orderNo = DateTime.Now.ToString("YYYY-MM-DD") + "/" + Convert.ToString(maxOrderId + 1);
 
                 order.orderNo = orderNo;
                 order.custCVR = custCVR;

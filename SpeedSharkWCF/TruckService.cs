@@ -112,68 +112,35 @@ namespace SpeedSharkWCF
         }
         //works
 
-        public List<Truck> getFunctionalTrucks()
+        public List<int> getFunctionalTrucks()
         {
-            List<Truck> trucks = new List<Truck>();
+            List<int> truckNumbers = new List<int>();
 
             if (System.Threading.Monitor.TryEnter(obj5, 45000))
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Truck> returnList = truckCtr.getFunctionalTrucks();
-
-                    if (returnList.Count != 0)
-                    {
-                        foreach (SpeedSharkServer.Model.Truck hostedTruck in returnList)
-                        {
-                            Truck serviceTruck = new Truck();
-
-                            serviceTruck.TruckId = hostedTruck.truckId;
-                            serviceTruck.Status = hostedTruck.status;
-
-                            trucks.Add(serviceTruck);
-                        }
-                    }
-                }
-                catch (NullReferenceException)
-                {
-                  
-                }
+                    truckNumbers = truckCtr.getFunctionalTrucks();
+                }                
                 finally
                 {
                    System.Threading.Monitor.Exit(obj5);
                 }
             }
-            return trucks;
+            return truckNumbers;
         } 
 
-//works
+        //works
 
-        public List<Truck> getAvailableTrucks()
+        public List<int> getAvailableTrucks()
         {
-            List<Truck> trucks = new List<Truck>();
+            List<int> truckNumbers = new List<int>();
 
             if (System.Threading.Monitor.TryEnter(obj6, 45000))
             {
                 try
                 {
-                    List<SpeedSharkServer.Model.Truck> returnList = truckCtr.getAvailableTrucks();
-
-                    if (returnList.Count != 0)
-                    {
-                        foreach (SpeedSharkServer.Model.Truck hostedTruck in returnList)
-                        {
-                            Truck serviceTruck = new Truck();
-
-                            serviceTruck.TruckId = hostedTruck.truckId;
-                            serviceTruck.Status = hostedTruck.status;
-
-                            trucks.Add(serviceTruck);
-                        }
-                    }
-                }
-                catch (NullReferenceException)
-                {
+                    truckNumbers = truckCtr.getAvailableTrucks();
                 }
                 finally
                 {
@@ -181,7 +148,7 @@ namespace SpeedSharkWCF
                 }
             }
 
-            return trucks;
+            return truckNumbers;
         }
 
         //done
