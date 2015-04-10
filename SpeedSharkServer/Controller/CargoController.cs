@@ -42,7 +42,7 @@ namespace SpeedSharkServer.Controller
             CargoHandler.UpdateCargo(cargoId, weight);
         }
 
-        public List<Cargo> GetCargoes()
+        public List<Cargo> getCargoes()
         {
             return CargoHandler.GetCargoes();
         }
