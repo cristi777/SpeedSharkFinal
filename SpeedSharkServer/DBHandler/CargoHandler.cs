@@ -9,7 +9,7 @@ namespace SpeedSharkServer.DBHandler
 {
     public static class CargoHandler
     {
-        public static void CreateCargo(double weight)
+        public static void InsertCargo(double weight)
         {
             using (var db = new SpeedSharkModelDataContext())
             {

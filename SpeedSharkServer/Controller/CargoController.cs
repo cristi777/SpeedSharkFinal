@@ -27,9 +27,9 @@ namespace SpeedSharkServer.Controller
             }
         }
 
-        public void createCargo(double weight)
+        public void insertCargo(double weight)
         {
-            CargoHandler.CreateCargo(weight);
+            CargoHandler.InsertCargo(weight);
         }
 
         public Cargo getCargo(int cargoId)
